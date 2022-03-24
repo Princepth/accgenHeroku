@@ -18,7 +18,7 @@ def codee(link: str):
   url=link
   d=json.dumps({"text":url})
   p=requests.post("http://192.46.210.24:8000/dick",data=d)
-  return p.json()["captcha"]  
+  return p.json()["captcha"]
 
 
 password=custompwd
