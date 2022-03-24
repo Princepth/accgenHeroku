@@ -14,10 +14,12 @@ def send(data):
     requests.post(f"{url}/save",data=data)
 client=amino.Client(deviceid)
 
-def codee(link):
-	d={"data":link}
-	p=requests.post("http://192.46.210.24:5000/captcha",data=d)
-	return p.json()["dick"]
+def codee(link: str):
+  url=link
+  d=json.dumps({"text":url})
+  p=requests.post("http://192.46.210.24:8000/dick",data=d)
+  return p.json()["captcha"]  
+
 
 password=custompwd
 
@@ -47,6 +49,5 @@ for i in range(3):
   except Exception as l:
     print(l)
     pass
-
 
 restart()
