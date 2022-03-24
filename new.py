@@ -1,5 +1,5 @@
 key=''
-app_name=""
+app_name="accheroku"
 deviceid=""
 custompwd=""
 url =""
